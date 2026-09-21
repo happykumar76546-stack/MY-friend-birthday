@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Birthday Surprise</title>
+    <meta name="description" content="A birthday surprise for Parmod Das.">
+    <meta property="og:title" content="Happy Birthday Parmod Das">
+    <meta property="og:description" content="A surprise birthday gift made for Parmod Das.">
+    <meta property="og:image" content="assets/celebration-hero.png">
+    <link rel="preload" href="assets/celebration-hero.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <section class="reveal-screen" id="reveal-screen" aria-label="Birthday reveal">
+      <img class="reveal-art" src="assets/celebration-hero.png" alt="">
+      <div class="reveal-panel">
+        <p class="eyebrow">For <span data-field="friendName">Your Friend</span></p>
+        <h1>A birthday surprise is waiting.</h1>
+        <p data-field="heroLine">You make ordinary days feel like something worth saving.</p>
+        <button class="primary-button" id="open-surprise" type="button">Open the surprise</button>
+      </div>
+    </section>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span data-field="friendName">Your Friend</span>
+      </a>
+      <nav aria-label="Birthday sections">
+        <a href="#note">Note</a>
+        <a href="#memories">Memories</a>
+        <a href="#gift">Gift</a>
+        <a href="#gallery">Photos</a>
+        <a href="#wish">Wish</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <img class="hero-image" src="assets/celebration-hero.png" alt="">
+        <div class="hero-copy">
+          <p class="eyebrow">Happy birthday, <span data-field="friendName">Your Friend</span></p>
+          <h2 data-field="headline">Today deserves a whole website.</h2>
+          <p data-field="introNote">I made this tiny birthday corner because one message did not feel big enough for all the smiles you have given people.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#gift">Open your gift</a>
+            <button class="ghost-button" id="replay-button" type="button">Replay surprise</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="countdown-band" aria-label="Birthday countdown">
+        <p class="countdown-title">Birthday countdown</p>
+        <div class="countdown-grid" id="countdown">
+          <div><strong data-unit="days">0</strong><span>Days</span></div>
+          <div><strong data-unit="hours">0</strong><span>Hours</span></div>
+          <div><strong data-unit="minutes">0</strong><span>Minutes</span></div>
+          <div><strong data-unit="seconds">0</strong><span>Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="note-section" id="note">
+        <div class="section-inner">
+          <p class="eyebrow">A small note</p>
+          <h2 data-field="noteTitle">The world feels brighter with you in it.</h2>
+          <p class="lead" data-field="longNote">You are the kind of person who turns simple moments into stories people remember. I hope this year gives you loud laughter, soft days, brave dreams, and every reason to feel loved.</p>
+        </div>
+      </section>
+
+      <section class="memories-section" id="memories">
+        <div class="section-heading">
+          <p class="eyebrow">Saved smiles</p>
+          <h2>Little things worth remembering</h2>
+        </div>
+        <div class="memory-grid" id="memory-grid"></div>
+      </section>
+
+      <section class="reasons-section">
+        <div class="reason-copy">
+          <p class="eyebrow">One more reason</p>
+          <h2 id="reason-text">You make people feel seen.</h2>
+        </div>
+        <button class="primary-button" id="reason-button" type="button">Show another reason</button>
+      </section>
+
+      <section class="gift-section" id="gift" aria-label="Surprise birthday gift">
+        <div class="gift-copy">
+          <p class="eyebrow">Secret gift</p>
+          <h2 data-field="giftTitle">Your surprise gift is ready.</h2>
+          <p data-field="giftMessage">Open this birthday gift and collect three wishes.</p>
+          <button class="primary-button" id="open-gift" type="button">Open gift</button>
+        </div>
+        <div class="gift-stage" aria-hidden="true">
+          <div class="sparkle sparkle-one"></div>
+          <div class="sparkle sparkle-two"></div>
+          <div class="sparkle sparkle-three"></div>
+          <div class="gift-box">
+            <div class="gift-lid"></div>
+            <div class="gift-ribbon-vertical"></div>
+            <div class="gift-ribbon-horizontal"></div>
+            <div class="gift-body"></div>
+          </div>
+          <div class="gift-surprise" id="gift-surprise"></div>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-heading">
+          <p class="eyebrow">Photo corner</p>
+          <h2>A few little snapshots</h2>
+        </div>
+        <div class="photo-grid" id="photo-grid"></div>
+      </section>
+
+      <section class="wish-section" id="wish">
+        <div class="wish-card">
+          <p class="eyebrow">Final wish</p>
+          <h2 data-field="wishTitle">May this year be gentle, wild, and beautifully yours.</h2>
+          <p data-field="finalWish">Happy birthday. I hope you get surprised by joy in the tiny places, cheered on by the right people, and reminded again and again that you are deeply loved.</p>
+          <p class="signature">With love, <span data-field="fromName">Your Name</span></p>
+          <button class="ghost-button" id="copy-wish" type="button">Copy wish</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
